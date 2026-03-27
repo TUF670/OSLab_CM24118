@@ -1,0 +1,113 @@
+:root {
+    --primary-blue: #003366;
+    --accent-blue: #007bff;
+    --light-blue: #e6f0ff;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --hungry-yellow: #ffcc00;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-blue);
+    color: var(--text-dark);
+}
+
+header {
+    background-color: var(--primary-blue);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-blue);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 51, 102, 0.15);
+    min-height: 60vh;
+}
+
+/* Page Switching Logic */
+.page { display: none; }
+.page.active { display: block; animation: fadeIn 0.5s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1, h2 { color: var(--primary-blue); }
+
+.btn {
+    background-color: var(--accent-blue);
+    color: var(--white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn:hover { background-color: var(--primary-blue); }
+
+/* Form Styling */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent-blue);
+    outline: none;
+}
+
+/* Simulation Specifics */
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 2px solid var(--primary-blue);
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.log-box {
+    background: #f1f1f1;
+    padding: 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-family: monospace;
+    height: 100px;
+    overflow-y: auto;
+}
